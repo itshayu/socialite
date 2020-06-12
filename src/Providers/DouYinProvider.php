@@ -41,29 +41,6 @@ class DouYinProvider extends AbstractProvider implements ProviderInterface
     }
 
     /**
-     * 获取授权码接口参数.
-     *
-     * @param string|null $state
-     *
-     * @return array
-     */
-    public function getCodeFields($state = null)
-    {
-        $fields = [
-            'client_key' => $this->getConfig()->get('client_id'),
-            'redirect_uri' => $this->redirectUrl,
-            'scope' => $this->formatScopes($this->scopes, $this->scopeSeparator),
-            'response_type' => 'code',
-        ];
-
-        if ($this->usesState()) {
-            $fields['state'] = $state;
-        }
-
-        return $fields;
-    }
-
-    /**
      * 获取access_token地址.
      *
      * {@inheritdoc}

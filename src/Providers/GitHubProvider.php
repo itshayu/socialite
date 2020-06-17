@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Itshayu\Socialite\Providers;
 
 use Exception;
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Itshayu\Socialite\AccessTokenInterface;
+use Itshayu\Socialite\ProviderInterface;
+use Itshayu\Socialite\User;
 
 /**
  * Class GitHubProvider.

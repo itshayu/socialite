@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Itshayu\Socialite\Providers;
 
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\InvalidArgumentException;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
-use Overtrue\Socialite\WeChatComponentInterface;
+use Itshayu\Socialite\AccessTokenInterface;
+use Itshayu\Socialite\InvalidArgumentException;
+use Itshayu\Socialite\ProviderInterface;
+use Itshayu\Socialite\User;
+use Itshayu\Socialite\WeChatComponentInterface;
 
 /**
  * Class WeChatProvider.

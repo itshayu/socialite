@@ -1,11 +1,11 @@
 <?php
 
-namespace Overtrue\Socialite\Providers;
+namespace Itshayu\Socialite\Providers;
 
-use Overtrue\Socialite\AccessToken;
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Itshayu\Socialite\AccessToken;
+use Itshayu\Socialite\AccessTokenInterface;
+use Itshayu\Socialite\ProviderInterface;
+use Itshayu\Socialite\User;
 
 /**
  * Class DouYinProvider.
@@ -41,6 +41,29 @@ class DouYinProvider extends AbstractProvider implements ProviderInterface
     }
 
     /**
+     * 获取授权码接口参数.
+     *
+     * @param string|null $state
+     *
+     * @return array
+     */
+    public function getCodeFields($state = null)
+    {
+        $fields = [
+            'client_key' => $this->getConfig()->get('client_id'),
+            'redirect_uri' => $this->redirectUrl,
+            'scope' => $this->formatScopes($this->scopes, $this->scopeSeparator),
+            'response_type' => 'code',
+        ];
+
+        if ($this->usesState()) {
+            $fields['state'] = $state;
+        }
+
+        return $fields;
+    }
+
+    /**
      * 获取access_token地址.
      *
      * {@inheritdoc}
@@ -55,7 +78,7 @@ class DouYinProvider extends AbstractProvider implements ProviderInterface
      *
      * @param string $code
      *
-     * @return \Overtrue\Socialite\AccessToken
+     * @return \Itshayu\Socialite\AccessToken
      */
     public function getAccessToken($code)
     {
@@ -88,7 +111,7 @@ class DouYinProvider extends AbstractProvider implements ProviderInterface
      *
      * @param \Psr\Http\Message\StreamInterface|array $body
      *
-     * @return \Overtrue\Socialite\AccessTokenInterface
+     * @return \Itshayu\Socialite\AccessTokenInterface
      */
     protected function parseAccessToken($body)
     {

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite;
+namespace Itshayu\Socialite;
 
 use Closure;
 use InvalidArgumentException;
@@ -24,7 +24,7 @@ class SocialiteManager implements FactoryInterface
     /**
      * The configuration.
      *
-     * @var \Overtrue\Socialite\Config
+     * @var \Itshayu\Socialite\Config
      */
     protected $config;
 
@@ -92,7 +92,7 @@ class SocialiteManager implements FactoryInterface
     /**
      * Set config instance.
      *
-     * @param \Overtrue\Socialite\Config $config
+     * @param \Itshayu\Socialite\Config $config
      *
      * @return $this
      */

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite;
+namespace Itshayu\Socialite;
 
 interface ProviderInterface
 {
@@ -23,9 +23,9 @@ interface ProviderInterface
     /**
      * Get the User instance for the authenticated user.
      *
-     * @param \Overtrue\Socialite\AccessTokenInterface $token
+     * @param \Itshayu\Socialite\AccessTokenInterface $token
      *
-     * @return \Overtrue\Socialite\User
+     * @return \Itshayu\Socialite\User
      */
     public function user(AccessTokenInterface $token = null);
 }

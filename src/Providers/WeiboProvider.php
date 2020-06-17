@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Itshayu\Socialite\Providers;
 
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Itshayu\Socialite\AccessTokenInterface;
+use Itshayu\Socialite\ProviderInterface;
+use Itshayu\Socialite\User;
 
 /**
  * Class WeiboProvider.
@@ -87,7 +87,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
     /**
      * Get the raw user for the given access token.
      *
-     * @param \Overtrue\Socialite\AccessTokenInterface $token
+     * @param \Itshayu\Socialite\AccessTokenInterface $token
      *
      * @return array
      */
@@ -111,7 +111,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
      *
      * @param array $user
      *
-     * @return \Overtrue\Socialite\User
+     * @return \Itshayu\Socialite\User
      */
     protected function mapUserToObject(array $user)
     {

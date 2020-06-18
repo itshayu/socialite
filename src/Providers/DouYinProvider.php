@@ -49,12 +49,12 @@ class DouYinProvider extends AbstractProvider implements ProviderInterface
      */
     public function getCodeFields($state = null)
     {
-        $fields = [
+        $fields = array_merge([
             'client_key' => $this->getConfig()->get('client_id'),
             'redirect_uri' => $this->redirectUrl,
             'scope' => $this->formatScopes($this->scopes, $this->scopeSeparator),
             'response_type' => 'code',
-        ];
+        ], $this->parameters);
 
         if ($this->usesState()) {
             $fields['state'] = $state;

@@ -6,6 +6,7 @@ use Itshayu\Socialite\AccessToken;
 use Itshayu\Socialite\AccessTokenInterface;
 use Itshayu\Socialite\ProviderInterface;
 use Itshayu\Socialite\User;
+use Itshayu\Socialite\AuthorizeFailedException;
 
 /**
  * Class DouYinProvider.
